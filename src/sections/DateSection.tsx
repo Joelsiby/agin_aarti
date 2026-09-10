@@ -68,18 +68,6 @@ export default function DateSection() {
           Save The Date
         </motion.p>
 
-        <motion.div
-          className="flex items-center text-[#9b7a4a] font-serif tracking-wider"
-          style={{ gap: '1.2vw', fontSize: '3.2vw' }}
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <span className="text-[#c9a84c]">&#10022;</span>
-          <span>Mark the date</span>
-          <span className="text-[#c9a84c]">&#10022;</span>
-        </motion.div>
-
         {/* Date cards */}
         <div className="flex" style={{ gap: '2.5vw', marginTop: '4vw' }}>
           <DateCard value="30" label="Day" delay={0.2} />
@@ -102,6 +90,17 @@ export default function DateSection() {
             </motion.span>
           ))}
         </div>
+
+        {/* Time */}
+        <motion.p
+          className="font-serif tracking-wider text-[#9b7a4a]"
+          style={{ fontSize: '2.8vw', marginTop: '2vw' }}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 1.1, duration: 0.6 }}
+        >
+          09:30 AM &ndash; 10:30 AM
+        </motion.p>
       </div>
     </section>
   );
